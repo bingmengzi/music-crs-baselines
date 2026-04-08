@@ -68,16 +68,18 @@ uv pip install flash-attn --no-build-isolation # for fast llm inference
 ### Run Inference on the Development Set
 
 **⚠️ Note: During inference, the recommender system must always retrieve candidates from the entire track catalog. Do not filter, subset, or restrict tracks using `track_split_types` or any other mechanism!**
+
 For BM25/BERT baselines, your config must include:
+
 ```yaml
 track_split_types:
   - "all_tracks"
 ```
+
 If you do not use `all_tracks`, your evaluation may be considered invalid.
 
 - Always use `all_tracks` for every experiment and submission.
 - Do **not** preprocess, filter, or use only a subset of tracks during inference.
-
 
 
 ```bash
@@ -108,18 +110,20 @@ Create a config file in `config/`:
 
 ```yaml
 # config/my_model.yaml
-lm_type: "meta-llama/Llama-3.2-1B-Instruct"
-retrieval_type: "qwen_embedding"
+lm_type: "Qwen/Qwen3-4B" # change llama to qwen3
+retrieval_type: "bm25"
+test_dataset_name: "talkpl-ai/TalkPlayData-Challenge-Dataset"
 item_db_name: "talkpl-ai/TalkPlayData-Challenge-Track-Metadata"
 user_db_name: "talkpl-ai/TalkPlayData-Challenge-User-Metadata"
-split_types:
-  - "test_warm"
-  - "test_cold"
+track_split_types:
+  - "all_tracks"
+user_split_types:
+  - "all_users"
 corpus_types:
   - "track_name"
   - "artist_name"
   - "album_name"
-  - "tag_list"
+  - "release_date"
 cache_dir: "./cache"
 device: "cuda"
 attn_implementation: "flash_attention_2"
