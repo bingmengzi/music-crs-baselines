@@ -1,50 +1,28 @@
 # Music Conversational Recommendation Challenge — Baselines
 
-Welcome to the official baseline repository for the **Music Conversational Recommendation Challenge (Music-CRS)**, a global research competition bridging Natural Language Processing and Recommender Systems. Participants build systems that engage in multi-turn conversations about music, recommend relevant tracks, and generate natural language responses.
+Official evaluation framework for the **The RecSys Challenge 2026 Conversational Music Recommendation System Challenge**. Music-CRS focuses on the evolving landscape of music discovery, where static recommendation lists are being replaced by dynamic, conversational interactions. As users increasingly interact with AI through natural language, there is a critical need for systems that can seamlessly integrate Natural Language Understanding (NLU) with high-precision Recommender Systems (RecSys). This challenge aims to push the boundaries of how AI understands nuanced user preferences, explores musical tastes through dialogue, and provides contextually relevant track recommendations.
 
-The challenge uses **TalkPlayData-Challenge**, a large-scale synthetic multi-turn dialogue dataset grounded in real music listening histories, with pre-extracted multimodal track and user embeddings provided.
+This repository provides standardized tools to evaluate music recommendation systems on the **TalkPlay Data Challenge** datasets. Participants must follow the strict inference JSON format specified below to ensure their submissions can be properly evaluated.
 
-Dataset splits: **Train**, **Development**, **Blind A**, **Blind B**
-
----
-
-## Organizing Committee
-
-| Name | Affiliation |
-|---|---|
-| Seungheon Doh | KAIST, South Korea |
-| Sergio Oramas | Pandora/SiriusXM |
-| Bruno Sguerra | Deezer Research |
-| Abhinav Bohra | Amazon |
-| Claudio Pomo | Politecnico di Bari, Italy |
-| Francesco Barile | Maastricht University, Netherlands |
-
----
+- **ACM RecSys Website**: [https://www.recsyschallenge.com/](https://www.recsyschallenge.com/)
+- **Challenge Website**: [https://nlp4musa.github.io/music-crs-challenge/](https://nlp4musa.github.io/music-crs-challenge/)
+- **Challenge datasets**: [talkpl-ai/talkplay-data-challenge](https://huggingface.co/collections/talkpl-ai/talkplay-data-challenge)
 
 ## Timeline
 
 | Date | Milestone |
-|---|---|
+|------|-----------|
 | 31 March 2026 | Website online |
 | 10 April 2026 | Start RecSys Challenge — Release dataset (Train, Development, Blind A) |
 | 15 April 2026 | Submission System Open — Leaderboard live (with Blind A dataset) |
-| 15 June 2026 | Blind Dataset B released — Submission system activated for Blind B |
+| 15 June 2026 | Blind Dataset B released, Activate submission system for Blind B dataset |
 | 30 June 2026 | End RecSys Challenge |
 | 6 July 2026 | Final Leaderboard & Winners — EasyChair open for submissions |
-| 9 July 2026 | Upload code of final predictions |
+| 9 July 2026 | Upload code of the final predictions |
 | 20 July 2026 | Paper Submission Due |
 | 3 August 2026 | Paper Acceptance Notifications |
 | 10 August 2026 | Camera-Ready Papers |
 | September 2026 | RecSys Challenge Workshop at ACM RecSys 2026 |
-
----
-
-## Challenge Overview
-
-Build a conversational AI that can:
-- Understand user music preferences through natural multi-turn dialogue
-- Recommend relevant tracks from a large music catalog
-- Generate engaging, personalized natural language responses about music
 
 ---
 
